@@ -5,7 +5,6 @@ import static androidx.core.content.ContextCompat.startActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +48,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
                 builder.setPositiveButton("View", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        MyDBHandler dbHandler = new MyDBHandler(activity, null, null, 1);
+                        DatabaseHandler dbHandler = new DatabaseHandler(activity, null, null, 1);
 
                         Intent activityName = new Intent(activity, MainActivity.class);
                         Bundle extras = new Bundle();

@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Unfollowed", Toast.LENGTH_SHORT).show();
                 }
 
-                MyDBHandler dbHandler = new MyDBHandler(MainActivity.this, null, null, 1);
+                DatabaseHandler dbHandler = new DatabaseHandler(MainActivity.this, null, null, 1);
                 dbHandler.updateUser(user);
 
 

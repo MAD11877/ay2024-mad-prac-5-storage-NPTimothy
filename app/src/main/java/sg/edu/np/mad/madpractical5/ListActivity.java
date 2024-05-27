@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
@@ -95,7 +94,7 @@ public class ListActivity extends AppCompatActivity {
     }
 
     public ArrayList<User> InitialiseDB() {
-        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this, null, null, 1);
 //        dbHandler.addUsers();
         return dbHandler.getUsers();
     }
